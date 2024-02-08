@@ -14,14 +14,17 @@ void primeNo(int n) {
   }
   //  finding prime number below 100
   cout << "The list of prime numbers below 100:"<<endl;
-  bool flag = true;
   for (int i = 2; i <= 100; i++) {
-    for(int x = 2;x<=floor(i/2.0);x++){
+    bool flag = true;
+    for(int x = 2;x<=ceil(i/2.0);x++){
       if(i%x==0){
         flag = false;
         break;
       }
     }
+    if(flag){
+        cout << i<<",";
+        }
   }
 }
 int main() {
@@ -29,4 +32,4 @@ int main() {
   cout << "Enter the value of n"<<endl;
   cin >> n;
   primeNo(n);
-}
+} 
