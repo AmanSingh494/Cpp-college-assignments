@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 #include <list>
 using namespace std;
-void fibonacci(n){
+void fibonacci(int n){
     list<int> seq = {0,1};
     for(int a =0;a<n-2;a++){
       auto  lastIt = --(seq.end());
