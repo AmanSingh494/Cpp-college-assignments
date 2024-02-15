@@ -1,6 +1,16 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+void sum_n_count2(int n){
+    int count=0;
+    int sum=0;
+    while(n>0){
+        sum +=n%10;
+        count++;
+        n/=10;
+    }
+    cout << "Sum and count of the given number is " << sum << " and " << count;
+}
 void sum_n_count(int n){
     int count=0;
     int sum=0;
@@ -17,6 +27,6 @@ int main() {
     int n;
     cout << "Enter value";
     cin >> n;
-    sum_n_count(n);
+    sum_n_count2(n);
     return 0;
 }
