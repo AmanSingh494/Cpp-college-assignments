@@ -77,7 +77,7 @@ void printReverse(int arr[], int len)
   for (int i = len - 1; i >= 0; i--)
   {
     cout << arr[i] << ' ';
-  } 
+  }
 }
 
 void fillArr(int arr[], int size)
@@ -99,11 +99,34 @@ int main()
 
   cout << "Enter the  elements in array 1" << endl;
   fillArr(arr1, len1);
-  printEven(arr1, len1);
-  printOdd(arr1, len1);
-  printAvg(arr1, len1);
-  printMaxMin(arr1, len1);
-  removeDupl(arr1, len1);
-  printReverse(arr1, len1);
+  cout << "What action do you want to perform" << endl;
+  cout << "1.Print the even-valued elements" << endl;
+  cout << "2.Print the odd-valued elements" << endl;
+  cout << "3.Calculate and print the sum and average of the elements of array" << endl;
+  cout << "4.Print the maximum and minimum element of array " << endl;
+  cout << "5.Remove the duplicates from the array" << endl;
+  cout << "6.Print the array in reverse order" << endl;
+  cout << "Enter the number of the function you want to perform" << endl;
+  int option = 0;
+  cin >> option;
+  switch (option)
+  {
+  case 1:
+    printEven break;
+  case 2:
+    break;
+  case 3:
+    break;
+  case 4:
+    break;
+  case 5:
+    break;
+  case 6:
+    break;
+  }
+  for (int i = 0; i < len1; i++)
+  {
+    cout << arr1[i];
+  }
   return 0;
 }
