@@ -133,6 +133,17 @@ int main()
     int n;
     cout << "Enter the value of n" << endl;
     cin >> n;
+    ptrn1(n);
+    cout << endl;
+    ptrn2(n);
+    cout << endl;
+    ptrn3(n);
+    cout << endl;
+    ptrn4(n);
+    cout << endl;
     ptrn5(n);
+    cout << endl;
+    ptrn6(n);
+    
     return 0;
 }

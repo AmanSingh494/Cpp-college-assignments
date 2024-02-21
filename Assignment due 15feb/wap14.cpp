@@ -57,7 +57,6 @@ void removeDupl(int arr[], int len)
     noDupl.insert(arr[i]);
   }
   int arrSize = noDupl.size();
-  int newArr[arrSize];
   int i = 0;
   for (auto it = noDupl.begin(); it != noDupl.end(); it++)
   {
@@ -67,7 +66,7 @@ void removeDupl(int arr[], int len)
   cout << "The array with no duplicates is" << endl;
   for (int i = 0; i < arrSize; i++)
   {
-    cout << newArr[i] << ' ';
+    cout << arr[i] << ' ';
   }
 }
 
@@ -88,6 +87,20 @@ void fillArr(int arr[], int size)
   }
 }
 
+void printOptions()
+{
+  cout << "What action do you want to perform" << endl;
+  cout << "1.Print the even-valued elements" << endl;
+  cout << "2.Print the odd-valued elements" << endl;
+  cout << "3.Calculate and print the sum and average of the elements of array" << endl;
+  cout << "4.Print the maximum and minimum element of array " << endl;
+  cout << "5.Remove the duplicates from the array" << endl;
+  cout << "6.Print the array in reverse order" << endl;
+  cout << "7.Reenter the array " << endl;
+  cout << "8.Quit the program" << endl;
+  cout << "Enter the number of the function you want to perform" << endl;
+}
+
 int main()
 {
   int len1;
@@ -99,34 +112,36 @@ int main()
 
   cout << "Enter the  elements in array 1" << endl;
   fillArr(arr1, len1);
-  cout << "What action do you want to perform" << endl;
-  cout << "1.Print the even-valued elements" << endl;
-  cout << "2.Print the odd-valued elements" << endl;
-  cout << "3.Calculate and print the sum and average of the elements of array" << endl;
-  cout << "4.Print the maximum and minimum element of array " << endl;
-  cout << "5.Remove the duplicates from the array" << endl;
-  cout << "6.Print the array in reverse order" << endl;
-  cout << "Enter the number of the function you want to perform" << endl;
+  printOptions();
   int option = 0;
   cin >> option;
   switch (option)
   {
   case 1:
-    printEven break;
+    printEven(arr1, len1);
+    break;
   case 2:
+    printOdd(arr1, len1);
     break;
   case 3:
+    printAvg(arr1, len1);
     break;
   case 4:
+    printMaxMin(arr1, len1);
     break;
   case 5:
+    removeDupl(arr1, len1);
     break;
   case 6:
+    printReverse(arr1, len1);
     break;
-  }
-  for (int i = 0; i < len1; i++)
-  {
-    cout << arr1[i];
+  case 7:
+    main();
+    break;
+  case 8:;
+    break;
+  default:
+    printAvg(arr1, len1);
   }
   return 0;
 }
